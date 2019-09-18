@@ -1,12 +1,12 @@
-#include <stdio.h>
+#include <unistd.h>
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)c
+ * Return: Alwiays 0 (Success)c
  */
 int main(void)
 {
 	char str[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	fwrite(str, 1, sizeof(str)-1, stderr);
+	write(2, str, sizeof(str)-1);
 	return (1);
 }
