@@ -17,11 +17,12 @@ int main(void)
 
 	for (ch = 48; ch <= 57; ch++)
 	{
-		for (ch2 = 48; ch2 <= 56; ch2++)
+		for (ch2 = 48; ch2 <= 57; ch2++)
 		{
+			ch4 = ch2 + 1;
 			for (ch3 = ch; ch3 <= 57; ch3++)
 			{
-				for (ch4 = ch2 + 1; ch4 <= 57; ch4++)
+				for (ch4; ch4 <= 57; ch4++)
 				{
 					putchar(ch);
 					putchar(ch2);
@@ -34,6 +35,7 @@ int main(void)
 						putchar(32);
 					}
 				}
+				ch4 = 48;
 			}
 		}
 	}
