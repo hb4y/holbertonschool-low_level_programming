@@ -22,7 +22,7 @@ int main(void)
 			ch4 = ch2 + 1;
 			for (ch3 = ch; ch3 <= 57; ch3++)
 			{
-				for (ch4; ch4 <= 57; ch4++)
+				for (ch4 = ch4; ch4 <= 57; ch4++)
 				{
 					putchar(ch);
 					putchar(ch2);
