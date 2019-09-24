@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - main function 
+ * print_alphabet - function
  * Return: On success 0.
- * On error, 1 is returned.
+ * Description: print lower alpha.
  */
 void print_alphabet(void)
 {
