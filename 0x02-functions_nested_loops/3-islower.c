@@ -1,17 +1,22 @@
 #include "holberton.h"
 
 /**
- * main - main function 
+ * _islower - function
+ * @c: keep return value
+ *
  * Return: On success 0.
- * On error, 1 is returned.
+ * 1 if lower 0 if not
  */
 int _islower(int c)
 {
+	int a;
+
 	if (c >= 97 && c <= 122)
 	{
-		return (1);
+		a = 1;
 	} else
 	{
-		return (0);
+		a = 0;
 	}
+	return (a);
 }
