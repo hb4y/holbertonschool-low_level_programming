@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * jack_bauer - function
+ * times_table - function
  *
  * Return: void
  * Print all hours.
