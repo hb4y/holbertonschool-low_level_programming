@@ -10,7 +10,7 @@ int main(void)
 	int i;
 	char a[] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n', '\n'};
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < (int)sizeof(a); i++)
 	{
 		_putchar(a[i]);
 	}
