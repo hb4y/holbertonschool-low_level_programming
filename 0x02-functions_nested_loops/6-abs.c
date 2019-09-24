@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- * int_abs - function
+ * _abs - function
  * @n: take an int value
  *
  * Return: abs
  * On error, 1 is returned.
  */
-int int_abs(int n)
+int _abs(int n)
 {
 	if (n < 0)
 	{
