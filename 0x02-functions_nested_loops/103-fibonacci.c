@@ -10,11 +10,14 @@ int main(void)
 	long int one = 1;
 	long int two = 2;
 	long int hold;
-	long int sum = 0;
+	long int sum = 2;
 
-	for (hold = 2; hold <= 4000000; hold = one + two)
+	for (hold = 3; hold <= 4000000; hold = one + two)
 	{
-		if (hold % 2 == 0)
+		if (hold == 0)
+		{
+		}
+		else if (hold % 2 == 0)
 		{
 			sum = sum + hold;
 		}
