@@ -11,7 +11,7 @@ int main(void)
 	long int two = 2;
 	long int hold;
 	int n;
-	
+
 	printf("1, 2, ");
 	for (n = 3; n <= 50; n++)
 	{
