@@ -28,7 +28,7 @@ void print_number(int n)
 		n = n % m;
 		if (m > 1)
 			m = m / 10;
-		while (n < m)
+		while ((n < m) && (m > 1))
 		{
 			_putchar('0');
 			m = m / 10;
