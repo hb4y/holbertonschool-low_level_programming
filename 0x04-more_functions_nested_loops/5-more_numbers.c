@@ -1,23 +1,19 @@
 #include "holberton.h"
 
 /**
- * print_numbers - function
- * Return: a * b
- * multi two integers
+ * more_numbers - function
+ * Return: void
+ * 0 - 14
  */
-void print_numbers(void)
+void more_numbers(void)
 {
 	int i;
-	int j;
 
-	for (i = 48; i <= 49; i++)
+	for (i = 0; i <= 14; i++)
 	{
-		if (i == 49)
-			_putchar(i);
-		for (j = 48; j <= 57; i++)
-		{
-			_putchar(j);
-		}
+		if (i > 9)
+			_putchar(((i / 10) % 10) + 48);
+		_putchar((i % 10) + 48);
 	}
 	_putchar('\n');
 }
