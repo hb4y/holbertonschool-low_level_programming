@@ -2,6 +2,7 @@
 
 /**
  * _isdigit - function
+ * @c: char value
  * Return: 1 if digit
  * if not, 0 is returned.
  */
