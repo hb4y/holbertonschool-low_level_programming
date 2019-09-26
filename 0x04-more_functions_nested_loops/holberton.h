@@ -2,6 +2,7 @@
 #define HOLBERTON_H
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
 int _isupper(int c);
 int _putchar(char c);
