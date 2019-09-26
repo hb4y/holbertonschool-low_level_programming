@@ -2,6 +2,7 @@
 
 /**
  * _isupper - function
+ * @c: int value of char
  * Return: 1 if uppercase
  * if not, 0 is returned.
  */
