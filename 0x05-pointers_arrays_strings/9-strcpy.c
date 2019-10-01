@@ -2,7 +2,7 @@
 
 /**
  * _strcpy - copy an array.
- * @dest: destiny 
+ * @dest: destiny
  * @src: source
  * Return: void.
  */
@@ -17,5 +17,5 @@ char *_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 	for ( ; i < n; i++)
 		dest[i] = '\0';
-        return dest;
+	return (dest);
 }
