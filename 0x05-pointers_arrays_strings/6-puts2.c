@@ -2,7 +2,7 @@
 
 /**
  * puts2 - print a string reverse.
- * @s: string - char pointer to string
+ * @str: string - char pointer to string
  * Return: void.
  */
 
