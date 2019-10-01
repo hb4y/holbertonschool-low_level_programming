@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * reset_to_98 - takes a pointer and update de value he point.
- *
+ * reset_to_98 - update de value.
+ * @n: int pointer
  * Return: void.
  */
 
