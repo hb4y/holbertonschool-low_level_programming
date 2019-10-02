@@ -13,7 +13,7 @@ int main(void)
 
 	pass = 2772;
 	srand(time(NULL));
-	n = (rand() % (122 - 97 + 1)) + 97;
+	n = (rand() % (122 - 48 + 1)) + 48;
 
 	for (i = pass / n; i > 0; i--)
 		printf("%c", n);
