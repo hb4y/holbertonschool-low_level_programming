@@ -9,14 +9,18 @@
 
 int main(void)
 {
-	int n, pass, i;
+	int n, pass;
 
 	pass = 2772;
 	srand(time(NULL));
-	n = (rand() % (122 - 48 + 1)) + 48;
 
-	for (i = pass / n; i > 0; i--)
+	while (pass > 122 && pass > 48)
+	{
+		n = (rand() % (122 - 48 + 1)) + 48;
 		printf("%c", n);
-	printf("%c", pass - ((pass / n) * n));
+		pass -= n;
+	}
+
+	printf("%c", pass);
 	return (0);
 }
