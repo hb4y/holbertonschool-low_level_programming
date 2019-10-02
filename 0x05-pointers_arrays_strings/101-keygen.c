@@ -1,5 +1,7 @@
 #include "holberton.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
  * main - main to print a valid pass.
  * Return: 0 on sucess
@@ -7,12 +9,14 @@
 
 int main(void)
 {
-	int n;
+	int n, pass, i;
 
-	srand(time(0));
-	n = rand();
-	n = (n/n) * 88;
-	printf("zzzzzzzzzzzzzzzzzzzzzz");
-	printf("%c", n);
+	pass = 2772;
+	srand(time(NULL));
+	n = (rand() % (122 - 97 + 1)) + 97;
+
+	for (i = pass / n; i > 0; i--)
+		printf("%c", n);
+	printf("%c", pass - ((pass / n) * n));
 	return (0);
 }
