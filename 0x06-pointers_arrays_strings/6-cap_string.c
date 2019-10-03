@@ -9,7 +9,7 @@
 char *cap_string(char *c)
 {
 	int i, j;
-	char *separ = ",;.!?\"(){} ";
+	char *separ = ",;.!?\"(){} \t\n";
 
 
 	for (i = 0; c[i] != '\0'; i++)
@@ -19,8 +19,6 @@ char *cap_string(char *c)
 			if (i == 0)
 				c[i] = (int)c[i] - 32;
 			else if (c[i - 1] == separ[j])
-				c[i] = (int)c[i] - 32;
-			else if (c[i - 2] == '\\' && (c[i - 1] == 't' || c[i - 1] == 'n'))
 				c[i] = (int)c[i] - 32;
 		}
 	}
