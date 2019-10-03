@@ -8,16 +8,20 @@
 
 char *rot13(char *c)
 {
-	int i;
-	/*char *min = "abcdefghijklmnopqrstuvwxyz";*/
-	/*char *may = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";*/
+	int i, j;
+	char *alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char *rot = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		if ((c[i] >= 97 && c[i] <= 122))
-			c[i] = (((c[i] - 97) + 13) % 26) + 97;
-		else if (c[i] >= 65 && c[i] <= 90)
-			c[i] = (((c[i] - 65) + 13) % 26) + 65;
+		for (j = 0; alpha[j] != '\0'; j++)
+		{
+			if (c[i] == alpha[j])
+			{
+				c[i] = rot[j];
+				break;
+			}
+		}
 	}
 	return (c);
 }
