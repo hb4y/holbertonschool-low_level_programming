@@ -24,6 +24,8 @@ char *_strstr(char *haystack, char *needle)
 			if (haystack[i] == needle[j])
 			{
 				count++;
+				if (needle[j] == haystack[i + 1])
+					haystack++;
 				needle++;
 				if (count == len)
 					return (haystack + (i - (len - 1)));
