@@ -27,14 +27,11 @@ char *_strstr(char *haystack, char *needle)
 				needle++;
 				if (count == len)
 					return (haystack + (i - (len - 1)));
-				else
-					break;
-			} else
-			{
-				count = 0;
-				needle = tmp;
 				break;
 			}
+			count = 0;
+			needle = tmp;
+			break;
 		}
 	}
 	return (NULL);
