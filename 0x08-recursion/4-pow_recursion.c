@@ -2,8 +2,9 @@
 
 /**
  * _pow_recursion  - function
- * @n: int to calculate factorial
- * Return: int factorial of n
+ * @x: int base
+ * @y: int power
+ * Return: x power y
  */
 int _pow_recursion(int x, int y)
 {
