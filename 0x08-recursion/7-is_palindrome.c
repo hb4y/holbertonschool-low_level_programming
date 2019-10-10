@@ -15,8 +15,8 @@ int is_palindrome(char *s)
 /**
  * _d_pntr - function
  * @n: int
- * @div: div by
- * Return: 1 if prime; 0 if not
+ * @len: len
+ * Return: 1 if not 0 if is
  */
 
 int _d_pntr(char *n, int len)
@@ -25,7 +25,7 @@ int _d_pntr(char *n, int len)
 	{
 		if (*n == n[len - 1])
 		{
-			return(_d_pntr(n + 1, len - 2));	
+			return (_d_pntr(n + 1, len - 2));
 		} else
 			return (0);
 	}
