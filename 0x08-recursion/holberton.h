@@ -12,5 +12,8 @@ int _sqrt_recursion(int n);
 int _sqrt(int n, int count);
 int is_prime_number(int n);
 int is_prime(int n, int div);
+int is_palindrome(char *s);
+int _d_pntr(char *s, int len);
+int _len(char *n);
 
 #endif /* HOLBERTON_H */
