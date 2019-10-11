@@ -1,7 +1,10 @@
 #include "holberton.h"
 
-/** main - function
- * 
+/**
+ * main - function
+ * @argc: number of arguments
+ * @argv: pointer to string @argc: number of arguments
+ * @argv: pointer to strings
  * Return: Always 0
  */
 
