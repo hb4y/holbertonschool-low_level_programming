@@ -1,4 +1,4 @@
-#include "holberton.h"
+iinclude "holberton.h"
 
 /**
  * main - function
@@ -10,7 +10,7 @@
 
 int main(int argc, char **argv)
 {
-	printf("%d\n", argc);
+	printf("%d\n", argc - 1);
 	(void)argv;
 	return (0);
 }
