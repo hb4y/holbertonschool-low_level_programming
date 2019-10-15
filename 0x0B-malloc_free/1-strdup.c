@@ -10,6 +10,8 @@ char *_strdup(char *str)
 	char *arr;
 	int i, len;
 
+	if (!str)
+		return (NULL);
 	for (len = 1; str[len] != '\0'; len++)
 	{
 	}
