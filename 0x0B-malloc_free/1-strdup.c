@@ -9,11 +9,11 @@ char *_strdup(char *str)
 {
 	char *arr;
 	int i, len;
-	
+
 	for (len = 1; str[len] != '\0'; len++)
 	{
 	}
-	
+
 	arr = malloc(len * sizeof(str[0]));
 
 	if (len == 0 || !arr)
