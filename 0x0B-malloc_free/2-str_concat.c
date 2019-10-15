@@ -11,13 +11,14 @@ char *str_concat(char *s1, char *s2)
 	char *arr = "test";
 	int i, j, len, len2;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	for (len = 0; s1[len] != '\0'; len++)
 		;
 	for (len2 = 0; s2[len2] != '\0'; len2++)
 		;
-
-	if (len == 0 && len2 == 0)
-		return (NULL);
 
 	arr = malloc((len + len2 + 1) * sizeof(char));
 	if (!arr)
