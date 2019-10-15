@@ -19,5 +19,6 @@ char *create_array(unsigned int size, char c)
 	{
 		arr[i] = c;
 	}
+	array[i + 1] = '\0';
 	return (arr);
 }
