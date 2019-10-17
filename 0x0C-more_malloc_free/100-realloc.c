@@ -31,6 +31,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (ptr);
 
 	arr = malloc(new_size);
+	if (!arr)
+		free(arr);
 
 	if (new_size > old_size)
 	{
@@ -45,6 +47,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		_memcpy(ptr, arr, old_size);
 	} else
 		_memcpy(arr, ptr, new_size);
+	free(arr);
 	return (ptr);
 }
 
