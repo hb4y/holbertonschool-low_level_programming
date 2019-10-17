@@ -2,14 +2,14 @@
 
 /**
  * _calloc - calloc
- * @nmemb: size of array 
+ * @nmemb: size of array
  * @size: size of data
  * Return: char pointer
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *arr;
-	
+
 	if (size == 0 || nmemb == 0)
 		return (NULL);
 
