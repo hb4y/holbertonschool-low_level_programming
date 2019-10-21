@@ -22,7 +22,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	for (len = 1; name[len] != '\0'; len++)
 		;
-	cpy_name = malloc(len * sizeof(char));
+	cpy_name = malloc(len + 1 * sizeof(char));
 	if (!cpy_name)
 	{
 		free(bestia);
@@ -32,7 +32,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	for (len = 1; owner[len] != '\0'; len++)
 		;
-	cpy_owner = malloc(len * sizeof(char));
+	cpy_owner = malloc(len + 1 * sizeof(char));
 	if (!cpy_owner)
 	{
 		free(cpy_name);
