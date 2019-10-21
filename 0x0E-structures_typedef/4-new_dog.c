@@ -35,6 +35,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	cpy_owner = malloc(len * sizeof(char));
 	if (!cpy_owner)
 	{
+		free(new_name);
 		free(bestia);
 		return (NULL);
 	}
