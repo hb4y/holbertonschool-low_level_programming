@@ -10,7 +10,6 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *bestia;
-	char *cpy_name, *cpy_owner;
 	int len;
 
 	if (name == NULL || owner == NULL)
@@ -22,29 +21,27 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	for (len = 1; name[len] != '\0'; len++)
 		;
-	cpy_name = malloc(len + 1 * sizeof(char));
-	if (!cpy_name)
+	bestia->name = malloc(len + 1 * sizeof(char));
+	if (!bestia->name)
 	{
 		free(bestia);
 		return (NULL);
 	}
-	_strncpy(cpy_name, name, len);
+	_strncpy(bestia->name, name, len);
 
 	for (len = 1; owner[len] != '\0'; len++)
 		;
-	cpy_owner = malloc(len + 1 * sizeof(char));
-	if (!cpy_owner)
+	bestia->owner = malloc(len + 1 * sizeof(char));
+	if (!bestia->owner)
 	{
-		free(cpy_name);
+		free(bestia->name);
 		free(bestia);
 		return (NULL);
 	}
-	_strncpy(cpy_owner, owner, len);
+	_strncpy(bestia->owner, owner, len);
 
-	bestia->name = cpy_name;
 	bestia->age = age;
-	bestia->owner = cpy_owner;
-
+	
 	return (bestia);
 }
 
