@@ -21,9 +21,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		;
 	for (len2 = 1; owner[len2] != '\0'; len2++)
 		;
-	
+
 	bestia->name = malloc(len + 1 * sizeof(char));
-	
+
 	if (!bestia->name)
 	{
 		free(bestia);
@@ -31,14 +31,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	bestia->owner = malloc(len + 1 * sizeof(char));
-	
+
 	if (!bestia->owner)
 	{
 		free(bestia->name);
 		free(bestia);
 		return (NULL);
 	}
-	
+
 	bestia->name = _strncpy(bestia->name, name, len);
 	bestia->owner = _strncpy(bestia->owner, owner, len2);
 	bestia->age = age;
