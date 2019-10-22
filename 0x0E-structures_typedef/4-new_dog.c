@@ -39,27 +39,32 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	bestia->name = _strncpy(bestia->name, name, len);
-	bestia->owner = _strncpy(bestia->owner, owner, len2);
+	bestia->name = _strcpy(bestia->name, name);
+	bestia->owner = _strcpy(bestia->owner, owner);
 	bestia->age = age;
 
 	return (bestia);
 }
 
 /**
- * _strncpy - copy string.
- * @dest: destination string
- * @src: source string
- * @n: n bytes
- * Return: char*
+ * _strcpy - copy an array.
+ * @dest: destiny
+ * @src: source
+ * Return: char *.
  */
-char *_strncpy(char *dest, char *src, int n)
-{
-	int i;
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
+char *_strcpy(char *dest, char *src)
+{
+	int i, n;
+
+	n = 0;
+	while (src[n] != '\0')
+	{
+		n++;
+	}
+
+	for (i = 0; src[i] != '\0'; i++)
 		dest[i] = src[i];
-	for ( ; i < n; i++)
-		dest[i] = '\0';
+	dest[i++] = '\0';
 	return (dest);
 }
