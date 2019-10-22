@@ -30,6 +30,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	_strncpy(bestia->name, name, len);
 
+	bestia->age = age;
+
 	for (len = 1; owner[len] != '\0'; len++)
 		;
 	bestia->owner = malloc(len + 1 * sizeof(char));
@@ -40,8 +42,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	_strncpy(bestia->owner, owner, len);
-
-	bestia->age = age;
 
 	return (bestia);
 }
