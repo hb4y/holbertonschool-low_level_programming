@@ -7,6 +7,7 @@
 int main(int argc, char *argv[])
 {
 	int res;
+	int (*func)(int, int);
 
 	if (argc != 4)
 	{
@@ -14,7 +15,16 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	res = (get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3]));
+	func = get_op_func(argv[2]);
+
+	if (!func)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	res = func(atoi(argv[1]), atoi(argv[3]));
 	printf("%d\n", res);
+	
 	return (0);
 }

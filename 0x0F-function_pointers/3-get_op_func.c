@@ -18,16 +18,14 @@ int (*get_op_func(char *s))(int, int)
 
 	i = 0;
 
-	while (*s != (*ops[i].op) && (*ops[i].f) != NULL)
+	while ((ops[i].op) != NULL)
 	{
+		if (!strcmp(ops[i].op, s))
+		{
+			return ((ops[i].f));
+		}
 		i++;
 	}
 
-	if ((*ops[i].f) == NULL || s[1] != '\0')
-	{
-		printf("Error\n");
-		exit(99);
-	}
-
-	return (*(ops[i].f));
+	return (NULL);
 }
