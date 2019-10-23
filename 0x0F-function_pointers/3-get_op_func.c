@@ -1,65 +1,33 @@
-#include "function_pointers.h"
+#include "3-calc.h"
 /**
- * op_add - function that adds
- * @a: first integer
- * @b: second integer
+ * get_op_func - function
+ * @s: operator
  * Return: int
  */
-int op_add(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
-	return (a + b);
-}
+	op_t ops[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
+	};
+	int i;
 
-/**
- * op_sub - function that subs
- * @a: first integer
- * @b: second integer
- * Return: int
- */
-int op_sub(int a, int b)
-{
-	return (a - b);
-}
+	i = 0;
 
-/**
- * op_mul - function that multiplies
- * @a: first integer
- * @b: second integer
- * Return: int 
- */
-int op_mul(int a, int b)
-{
-  return (a * b);
-}
+	while (*s != (*ops[i].op) && (*ops[i].f) != NULL)
+	{
+		i++;
+	}
 
-/**
- * op_div - function that divides
- * @a: first integer
- * @b: second integer
- * Return: int
- */
-int op_div(int a, int b)
-{
-	if (b == 0)
+	if ((*ops[i].f) == NULL || s[1] != '\0')
 	{
 		printf("Error\n");
-		exit(98);
+		exit(99);
 	}
-	return (a / b);
-}
 
-/** 
- * op_mod - function that modulo
- * @a: first integer
- * @b: second integer
- * Return: int
- */
-int op_mod(int a, int b)
-{
-	if (b == 0)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-	return (a % b);
+	return (*(ops[i].f));
 }
