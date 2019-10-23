@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < atoi(argv[1]); i++)
 	{
-		printf("%x", *((char *)main + i) & 0xff);
+		printf("%hhx", *((char *)main + i) & 0xff);
 
 		if (i < (atoi(argv[1]) - 1))
 			printf(" ");
