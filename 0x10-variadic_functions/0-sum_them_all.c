@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 /**
  * sum_them_all - function
- * @n: int parameters to sum 
+ * @n: int parameters to sum
  * Return: sum
  */
 int sum_them_all(const unsigned int n, ...)
