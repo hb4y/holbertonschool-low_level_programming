@@ -1,6 +1,6 @@
 #include "variadic_functions.h"
 /**
- * print_all - function
+ * p_char_pntr - function
  * @valist: int :arguments
  * Return: print
  */
@@ -10,7 +10,7 @@ void p_char_pntr(va_list valist)
 
 	c = va_arg(valist, char *);
 
-	if(c)
+	if (c)
 	{
 		printf("%s", c);
 		return;
@@ -18,7 +18,7 @@ void p_char_pntr(va_list valist)
 	printf("(nil)");
 }
 /**
- * print_all - function
+ * p_float - function
  * @valist: float
  * Return: print
  */
@@ -36,7 +36,7 @@ void p_int(va_list valist)
 	printf("%d", va_arg(valist, int));
 }
 /**
- * print_all - function
+ * p_char - function
  * @valist: char pntr
  * Return: print
  */
@@ -46,8 +46,7 @@ void p_char(va_list valist)
 }
 /**
  * print_all - function
- * @separator: char pntr separator
- * @n: int :arguments
+ * @format: format of the char* to print
  * Return: print
  */
 void print_all(const char * const format, ...)
@@ -57,7 +56,7 @@ void print_all(const char * const format, ...)
 	char *sep;
 
 	op_t ops[] = {
-	{"c", p_char},	
+	{"c", p_char},
 	{"i", p_int},
 	{"f", p_float},
 	{"s", p_char_pntr},
