@@ -21,7 +21,7 @@ size_t print_list(const list_t *h)
 		i++;
 	}
 
-	if((*h).next)
+	if ((*h).next)
 		i += print_list((*h).next);
 
 	return (i);
