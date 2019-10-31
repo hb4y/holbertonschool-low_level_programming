@@ -2,7 +2,8 @@
 
 /**
  * add_node- function that adds a node at beginning
- * @h: list
+ * @head: list_t address
+ * @str: string
  * Return: number of nodes
  */
 list_t *add_node(list_t **head, const char *str)
