@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * set_bit: - function
+ * set_bit - function
  * @n: pointer to UL
  * @index: nth bit to set to 1
  * Return: 1 if work or -1 if not
