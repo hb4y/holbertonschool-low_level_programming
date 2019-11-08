@@ -7,12 +7,12 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int mask;
+	unsigned long int mask;
 
 	if (index > 63)
 		return (-1);
 
-	mask = 1UL << index;
+	mask = ~(1UL << index);
 
 	*n = *n & mask;
 
