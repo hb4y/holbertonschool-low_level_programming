@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 		}
 	}
 	if (n_r == -1)
-	{dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[1]);
+	{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	n_r = close(from);
