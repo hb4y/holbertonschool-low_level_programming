@@ -24,9 +24,9 @@ int main(int argc, char *argv[])
 	{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	for (n_r = read(from, buffer, 1024); n < 0; n_r = read(from, buffer, 1024))
+	for (n_r = read(from, buffer, 1024); n_r < 0; n_r = read(from, buffer, 1024))
 	{n_w = write(to, buffer, n_w);
-		if (n == -1)
+		if (n_w == -1)
 		{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
