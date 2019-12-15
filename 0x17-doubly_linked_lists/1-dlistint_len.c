@@ -1,10 +1,10 @@
 #include "lists.h"
 /**
- * print_dlistint - function
+ * dlistint_len - function
  * @h: list
  * Return: number of nodes
  */
-size_t print_dlistint(const dlistint_t *h)
+size_t dlistint_len(const dlistint_t *h)
 {
 	size_t i;
 
