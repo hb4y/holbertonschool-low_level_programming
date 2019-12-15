@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 /**
  * main - keygen for crackme5
  * @argc: count of arguments
@@ -9,11 +10,11 @@
 int main(int argc, char **argv)
 {
 	char *ki = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
-	size_t us = strlen(argv[1]);
+	int us = strlen(argv[1]);
 	int i = argc, aux;
 	char f1, f2, f3, f4, f5, f6;
 
-	f1 = ki[(us ^ 0x3b) & 0x3f], i = 0;
+	f1 = ki[(us ^ 0x3b) & 0x3f], i = 0, aux = 0;
 	while (i < us)
 	{aux += argv[1][i];
 		i++;
