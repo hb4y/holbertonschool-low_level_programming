@@ -1,6 +1,6 @@
 #include "search_algos.h"
 
-/*
+/**
  * linear_search - Implement linear search
  * @array: integer array
  * @size: size of the array
@@ -20,7 +20,10 @@ int linear_search(int *array, size_t size, int value)
 		if (*(array + i) != value)
 			printf("Value checked array[%d] = [%d]\n", (int) i, *(array + i));
 		else
+		{
+			printf("Value checked array[%d] = [%d]\n", (int) i, *(array + i));
 			return (i);
+		}
 	}
 
 	return (-1);
